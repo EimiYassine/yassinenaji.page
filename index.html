@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yassine Naji - Digital Marketing & E-Business</title>
     <style>
-        /* Basic Reset and body styling */
+        /* Basic Reset */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            text-align: center;
             margin: 0;
             padding: 0;
+            background-color: #fff;
+            text-align: center;
         }
 
         /* Container for the embedded Canva content */
@@ -19,15 +19,14 @@
             position: relative;
             width: 100%;
             height: 0;
-            padding-top: 56.2225%;
-            box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);
-            margin-top: 1.6em;
-            margin-bottom: 0.9em;
+            padding-top: 56.2225%; /* Aspect ratio 16:9 */
+            margin-top: 2em;
+            box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
+            border-radius: 10px;
             overflow: hidden;
-            border-radius: 8px;
         }
 
-        /* Style for the iframe embedded content */
+        /* Iframe styling */
         .canva-container iframe {
             position: absolute;
             width: 100%;
@@ -35,24 +34,24 @@
             top: 0;
             left: 0;
             border: none;
-            padding: 0;
             margin: 0;
         }
 
-        /* Overlay button styling */
+        /* Reach Out Button */
         .contact-button {
             position: absolute;
-            top: 50%;
+            bottom: 20px; /* Adjust button to the bottom of the screen */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
             background-color: #3498db;
             color: white;
-            padding: 12px 30px;
+            padding: 12px 24px;
+            font-size: 18px;
             border-radius: 8px;
             text-decoration: none;
-            font-size: 18px;
+            z-index: 10; /* Make sure button stays on top of the iframe */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
-            z-index: 10;
         }
 
         .contact-button:hover {
@@ -61,9 +60,18 @@
     </style>
 </head>
 <body>
+
     <!-- Canva Embed -->
     <div class="canva-container">
         <iframe loading="lazy" 
                 src="https://www.canva.com/design/DAGZX2cNEcA/mDvYA7tOlU9kITNFgrDOBw/view?embed" 
                 allowfullscreen="allowfullscreen" 
-  
+                allow="fullscreen">
+        </iframe>
+
+        <!-- Reach Out Button -->
+        <a href="mailto:contact@yassinenaji.page" class="contact-button">Reach Out</a>
+    </div>
+
+</body>
+</html>
