@@ -7,8 +7,8 @@ body {
     padding: 0;
 }
 
-/* Main container for the landing page */
-.landing-page {
+/* Main container for the contact page */
+.contact-page {
     background-color: white;
     border-radius: 8px;
     padding: 40px;
@@ -48,7 +48,7 @@ p {
 
 /* Optional responsive design for smaller screens */
 @media (max-width: 768px) {
-    .landing-page {
+    .contact-page {
         width: 90%;
     }
 
