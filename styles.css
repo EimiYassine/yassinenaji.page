@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -15,7 +14,6 @@ body {
     text-align: center;
     padding: 20px;
 }
-
 .container {
     background-color: white;
     padding: 40px;
@@ -24,43 +22,58 @@ body {
     max-width: 500px;
     width: 100%;
 }
-
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #333;
 }
-
 h2 {
     font-size: 1.2rem;
     color: #666;
     margin-bottom: 30px;
 }
-
-.Contact-btn {
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between the buttons */
+}
+.Contact-btn, .LinkedIn-btn {
     display: inline-block;
-    background-color: black;
-    color: white;
-    text-decoration: none;
     padding: 12px 24px;
     border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
     transition: background-color 0.3s ease;
+    font-weight: bold;
 }
-
+.Contact-btn {
+    background-color: black;
+}
 .Contact-btn:hover {
     background-color: #333;
 }
-
+.LinkedIn-btn {
+    background-color: #0077b5; /* LinkedIn blue */
+}
+.LinkedIn-btn:hover {
+    background-color: #005c8a;
+}
+.LinkedIn-btn i {
+    margin-right: 8px; /* Space between icon and text */
+}
 @media (max-width: 600px) {
     .container {
         padding: 20px;
     }
-
     h1 {
         font-size: 2rem;
     }
-
     h2 {
         font-size: 1rem;
+    }
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
     }
 }
