@@ -37,7 +37,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     margin: auto;
     max-width: 600px;
-    width: calc(100% - 2rem); /* Improved */
+    width: calc(100% - 2rem);
     animation: fadeIn 0.6s ease-out;
     position: relative;
     display: flex;
@@ -48,21 +48,26 @@ body {
 
 /* Typography */
 h1 {
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    margin-bottom: 1rem;
+    font-size: clamp(2.25rem, 6vw, 3rem); /* Increased size */
+    font-weight: 700; /* Bold weight */
+    margin-bottom: 1.5rem; /* More space below */
     color: #1a1a1a;
-    line-height: 1.2;
-    letter-spacing: -0.03em;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    width: 100%;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle depth */
 }
 
+/* Keep H2 exactly as you want it */
 h2 {
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    margin: 0 0 1rem 0; /* Reset default margins */
-    color: #1a1a1a;
-    line-height: 1.15; /* Adjusted for better vertical rhythm */
-    letter-spacing: -0.03em;
-    width: 100%; /* Ensure full container width */
-    padding: 0 1rem; /* Prevent edge overflow */
+    font-size: clamp(1.1rem, 3vw, 1.3rem); /* Original perfect size */
+    color: #4a4a4a;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    max-width: 28ch;
+    width: 100%;
+    line-height: 1.5; /* Better readability */
 }
 
 /* Buttons */
@@ -138,7 +143,7 @@ h2 {
     }
     
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.9rem; /* Adjusted mobile size */
     }
     
     .button-container {
