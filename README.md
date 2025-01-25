@@ -6,5 +6,4 @@ This repository is for building my personal  website as part of a development co
 - Responsive design.
 - Simple and professional layout.
 
-Stay tuned for updates!
 Yassine.
