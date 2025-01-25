@@ -9,16 +9,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Body Styles with Decorative Elements */
+/* Body Styles */
 body {
     font-family: 'Inter', Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 2rem 4rem; /* Added bottom padding for footer */
     position: relative;
     overflow-x: hidden;
     line-height: 1.6;
@@ -35,7 +34,7 @@ body::before {
     z-index: -1;
 }
 
-/* Container Styles with Loading Animation */
+/* Container Styles */
 .container {
     background: linear-gradient(145deg, #ffffff, #f8f8f8);
     padding: 3rem;
@@ -45,8 +44,9 @@ body::before {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 600px;
     width: 100%;
-    margin: 2rem;
+    margin: 2rem auto;
     animation: fadeIn 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    position: relative;
 }
 
 .container:hover {
@@ -54,23 +54,34 @@ body::before {
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Footer Styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.2rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.95);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    backdrop-filter: blur(5px);
+    z-index: 100;
 }
 
 /* Typography Enhancements */
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.6rem;
+    margin-bottom: 1.2rem;
     color: #1a1a1a;
     font-weight: 700;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.03em;
     line-height: 1.2;
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: #4a4a4a;
     margin-bottom: 2.5rem;
     font-weight: 400;
@@ -84,113 +95,79 @@ h2 {
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem;
     flex-wrap: wrap;
 }
 
 .Contact-btn, .LinkedIn-btn {
     display: inline-flex;
     align-items: center;
-    padding: 0.875rem 1.75rem;
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
     font-size: 1rem;
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border: 2px solid transparent;
+    min-width: 180px;
+    justify-content: center;
 }
 
-.Contact-btn {
-    background-color: #1a1a1a;
-}
-
-.Contact-btn:hover {
-    background-color: #333;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.LinkedIn-btn {
-    background-color: #0A66C2;
-    gap: 0.5rem;
-}
-
-.LinkedIn-btn:hover {
-    background-color: #084d94;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.LinkedIn-btn i {
-    transition: transform 0.2s ease;
-    font-size: 1.1em;
-}
-
-.LinkedIn-btn:hover i {
-    transform: scale(1.1);
-}
-
-/* Enhanced Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        padding: 2rem 1.5rem 4rem;
+    }
+    
     .container {
-        padding: 2rem;
-        margin: 1.5rem;
-        border-radius: 12px;
+        padding: 2.5rem;
+        margin: 1.5rem auto;
     }
 
     h1 {
-        font-size: 2rem;
-        letter-spacing: -0.03em;
+        font-size: 2.2rem;
     }
 
     h2 {
-        font-size: 1.1rem;
-        max-width: 100%;
-        padding: 0 1rem;
+        font-size: 1.15rem;
     }
 
-    .button-container {
-        gap: 0.75rem;
-    }
-
-    .Contact-btn, .LinkedIn-btn {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.95rem;
-        width: 100%;
-        justify-content: center;
+    .footer {
+        padding: 1rem;
+        font-size: 0.85rem;
     }
 }
 
 @media (max-width: 480px) {
     body {
-        padding: 1rem;
+        padding: 1.5rem 1rem 3.5rem;
     }
 
     .container {
-        padding: 1.5rem;
-        margin: 1rem;
-        border-radius: 10px;
+        padding: 2rem;
+        margin: 1rem auto;
+        border-radius: 12px;
     }
 
     h1 {
-        font-size: 1.75rem;
+        font-size: 1.9rem;
     }
 
     h2 {
-        font-size: 1rem;
-        margin-bottom: 2rem;
+        font-size: 1.05rem;
     }
 
     .Contact-btn, .LinkedIn-btn {
-        font-size: 0.9rem;
-        padding: 0.675rem 1.25rem;
+        width: 100%;
+        min-width: auto;
+        padding: 0.9rem 1.5rem;
     }
+}
 
-    .LinkedIn-btn i {
-        font-size: 1em;
-    }
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Accessibility Improvements */
@@ -199,11 +176,4 @@ h2 {
     outline: 3px solid rgba(10, 102, 194, 0.4);
     outline-offset: 2px;
     border-color: rgba(255,255,255,0.3);
-}
-
-/* Touch optimization */
-@media (pointer: coarse) {
-    .Contact-btn, .LinkedIn-btn {
-        min-height: 48px;
-    }
 }
